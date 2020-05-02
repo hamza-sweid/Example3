@@ -14,7 +14,7 @@ html {
 
 @media (max-width: 575px) {
   html {
-   font-size: 13px;
+    font-size: 13px;
   }
 
 }
@@ -133,6 +133,10 @@ a:hover{
 	}
 }
 
+button:focus{
+	outline: none;
+}
+
 .col-12{
 	flex: 0 0 100%;
     flex-grow: 0;
@@ -224,7 +228,7 @@ a:hover{
 }
 
 #navbar .dropdown-menu a:focus{
-	background-color: white
+	background-color: white !important
 }
 
 #navbar .dropdown-item{
@@ -245,8 +249,8 @@ a:hover{
     cursor: pointer;
 }
 
-#navbar ul li:hover{
-	color: #1dbfaf
+#navbar ul li:hover, #navbar ul li :focus{
+	color: #1dbfaf !important;
 }
 
 #navbar .btn{
@@ -505,6 +509,16 @@ a:hover{
 		flex-direction: column;
 		max-width: 300px;
 		margin: 0 auto;
+	}
+
+	#land .container .doc-nav button{
+		margin: 0;
+	}
+}
+
+@media(max-width: 576px){
+	#land{
+		height: 540px
 	}
 }
 
