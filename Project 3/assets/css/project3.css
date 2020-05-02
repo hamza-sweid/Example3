@@ -14,7 +14,7 @@ html {
 
 @media (max-width: 575px) {
   html {
-    font-size: 13px;
+    font-size: 13px !important;
   }
 
 }
@@ -29,6 +29,12 @@ body {
 	overflow-x: hidden; 
 	list-style-type: none;
 	width: 100%
+}
+
+@media(max-width: 500px){
+	h2{
+		font-size: 23px !important
+	}
 }
 
 a{
@@ -52,6 +58,12 @@ a:hover{
 	-o-animation: line 1.3s;
 	animation: line 1.3s;
 
+}
+
+@media(max-width: 500px){
+	.line-pre{
+		width: 35px
+	}
 }
 
 @-webkit-keyframes line {
@@ -962,6 +974,12 @@ button:focus{
 
 .footer-line{
 	width: inherit;
+}
+
+@media(max-width: 576px){
+	.footer-lind{
+		height: 40px
+	}
 }
 
 /*------ end footer-© ------*/
