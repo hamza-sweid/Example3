@@ -536,7 +536,7 @@ button:focus{
 
 @media(max-width: 500px){
 	#land h5{
-		font-size: 0.9rem;
+		font-size: 1rem;
 		font-weight: bold
 	}
 
