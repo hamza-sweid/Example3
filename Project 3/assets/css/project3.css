@@ -1144,7 +1144,7 @@ button:focus{
 
 	@media(max-width: 576px){
 		.navbar-vertical{
-			top: 59px
+			top: 56px
 		}
 	}
 
