@@ -71,7 +71,7 @@ a:hover{
 		width: 0
 	}
 	to {
-		width: 40px
+		width: 35px
 	}
 }
 @-moz-keyframes line {
@@ -79,7 +79,7 @@ a:hover{
 		width: 0
 	}
 	to {
-		width: 40px
+		width: 35px
 	}
 }
 
@@ -88,7 +88,7 @@ a:hover{
 		width: 0
 	}
 	to {
-		width: 40px
+		width: 35px
 	}
 }
 @keyframes line {
@@ -96,7 +96,7 @@ a:hover{
 		width: 0
 	}
 	to {
-		width: 40px
+		width: 35px
 	}
 }
 
@@ -801,7 +801,7 @@ button:focus{
 #questions{
 	max-width: 1220px;
 	margin-top: 40px;
-	margin-bottom: 40px
+	margin-bottom: 40px;
 }
 
 #questions .question-hd *{
@@ -818,6 +818,10 @@ button:focus{
 	text-align: left;
 }
 
+#questions .question-brief p{
+	font-size: 16px !important
+}
+
 @media(max-width: 992px){
 	#questions{
 		max-width: 800px
@@ -828,6 +832,10 @@ button:focus{
 	#questions .question-hd a{
 		font-size: 17px
 	}
+
+	#questions .question-brief p{
+		font-size: 16px !important
+}
 }
 /*------ end questions ------*/
 /*---------------------------------*/
@@ -893,7 +901,7 @@ button:focus{
 	}
 
 	#more-q p{
-		font-size: 17px
+		font-size: 16px
 	}
 }
 /*------ end more question ------*/
@@ -977,7 +985,7 @@ button:focus{
 }
 
 @media(max-width: 576px){
-	.footer-lind{
+	.footer-line{
 		height: 40px
 	}
 }
