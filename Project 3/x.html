@@ -4,8 +4,8 @@
 	<title>Examples</title>
 	<!-- <link rel="stylesheet" href="owl.carousel.min.css">
 		<link rel="stylesheet" href="owl.theme.default.min.css"> -->
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/font-awesome-4.7.0/css/font-awesome.min.css"/>
 	<style type="text/css">
 		/*----------under line animation---------*/
 		.hover-underline-animation {
@@ -111,10 +111,10 @@
 	<button id="click">Click me</button>
 	<div id="city"></div>
 	
-	<script src="jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="bootstrap.min.js"></script>
-	<script src="owl.carousel.min.js"></script>
-	<script src="typed.js"></script>
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<!-- 	<script src="owl.carousel.min.js"></script> -->
+	<script src="assets/js/typed.js"></script>
 	<script type="text/javascript"> 
 
 		// ----------Changing Color-----------
@@ -210,7 +210,7 @@
 
 
 		  // ----------Get data by JSON-----------
-		  $.getJSON('download.json', function (data) {
+// 		  $.getJSON('download.json', function (data) {
 			// var content = '';
 			// // for (var x in data){
 			// 	content += `${data[0].userId[0]} \n`;
@@ -220,11 +220,11 @@
 		  })
 
 		  // ----------Get data by AJAX-----------
-		  $.ajax({
-		  	url: 'download.json',
-		  	dataType: 'json',
-		  	cache: false,
-		  	success: function (data, status) {
+// 		  $.ajax({
+// 		  	url: 'download.json',
+// 		  	dataType: 'json',
+// 		  	cache: false,
+// 		  	success: function (data, status) {
 		  // 		var content = '';
 		  // 		for(var i=0; i<data[0].userId.length; i++)
 		  // 		{
