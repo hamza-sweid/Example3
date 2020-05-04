@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Examples</title>
+	<!-- <link rel="stylesheet" href="owl.carousel.min.css">
+		<link rel="stylesheet" href="owl.theme.default.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+	<style type="text/css">
+		/*----------under line animation---------*/
+		.hover-underline-animation {
+			display: inline-block;
+			position: relative;
+			color: #0087ca;
+		}
+		.hover-underline-animation::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			transform: scaleX(0);
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			background-color: #0087ca;
+			transform-origin: bottom right;
+			transition: transform 0.25s ease-out;
+		}
+		.hover-underline-animation:hover::after {
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
+		/*----------under line animation---------*/
+
+		/*--------changing color---------*/
+		.red{
+			background-color: #dc3545
+		}
+		.blue{
+			background-color: #007bff
+		}
+		.green{
+			background-color: #28a745
+		}
+		.black{
+			background-color: #343a40
+		}
+		.warning{
+			background-color: #ffc107
+		}
+		/*--------changing color---------*/
+		.div11{
+			transition: .2s;
+			transform: rotateY(10deg);
+			transform-style: preserve-3d;
+			transform-origin: top top;
+			cursor: pointer;
+			filter: brightness(120%);
+		}
+
+		.div22{
+			transition: .2s;
+			transform: rotateX(10deg);
+			transform-style: preserve-3d;
+			transform-origin: bottom bottom;
+			cursor: pointer;
+			filter: brightness(120%);
+		}
+		.div33{
+			transition: .2s;
+			transform: rotateX(10deg);
+			transform-style: preserve-3d;
+			transform-origin: top top;
+			cursor: pointer;
+			filter: brightness(120%);
+		}
+		.div44{
+			transition: .2s;
+			transform: rotateY(10deg);
+			transform-style: preserve-3d;
+			transform-origin: bottom bottom;
+			cursor: pointer;
+			filter: brightness(120%);
+		}
+	</style>	
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="position: relative; text-align: center; height: 4000px; ">
+
+	<p class="hover-underline-animation">Hover this text to see the effect!</p>
+
+	<ul class="color">
+		<li style="cursor: pointer;" data-color="red">click here to see color red</li>
+		<li style="cursor: pointer;" data-color="blue">click here to see color blue</li>
+		<li style="cursor: pointer;" data-color="green">click here to see color green</li>
+		<li style="cursor: pointer;" data-color="black">click here to see color black</li>
+		<li style="cursor: pointer;" data-color="warning">click here to see color warning</li>
+	</ul>
+
+	<textarea class="chars-counter" maxlength="50" rows="4"></textarea>
+	<span class="num-counter">50</span>
+
+	<p class="typing">Hello from the othe side!</p>
+
+	<h1 id="clock"></h1>
+
+	<h1 id="char_random"></h1>
+	<h1 id="char_no_repeat"></h1>
+
+	<h3 class="shuffle"></h3>
+
+	<input class="value" type="name" name="name" placeholder="Enter a city">
+	<button id="click">Click me</button>
+	<div id="city"></div>
+	
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script src="owl.carousel.min.js"></script>
+	<script src="typed.js"></script>
+	<script type="text/javascript"> 
+
+		// ----------Changing Color-----------
+		var li = document.querySelectorAll('.color li');
+		var classes = [];
+		for (var i = 0; i < li.length; i++) {
+			classes.push(li[i].getAttribute('data-color'));
+			li[i].onclick = function () {
+				this.parentElement.classList.remove(...classes)
+				this.parentElement.classList.add(this.getAttribute("data-color"));
+			}
+		}
+		// ----------end Changing Color-----------
+
+		// ----------Calculate Characters-----------
+		var chars_counter = document.querySelector(".chars-counter");
+		var chars__counter = chars_counter.value.length;
+		var num_counter = document.querySelector(".num-counter");
+
+		chars_counter.oninput = function () {
+			num_counter.innerHTML = 50 - chars_counter.value.length;
+			if (num_counter.innerHTML == 0) {
+				num_counter.style.color = 'red'
+			} else{
+				num_counter.style.color = 'black'
+			}
+		}
+		// ----------end Calculate Characters-----------
+
+		// ----------typing-----------
+		var typing = document.querySelector('.typing').textContent;
+		var i =0;
+		var typingInterval = setInterval(function () {
+			document.querySelector('.typing').textContent += typing[i];
+			i++;
+			if (i > typing.length-1) {
+				clearInterval(typingInterval);
+			}
+		},100);
+		// ----------end typing-----------
+
+		// ----------Clock-----------
+		setInterval( () => {
+			var date    = new Date(),
+			hours   = date.getHours(),
+			minutes = date.getMinutes(),
+			seconds = date.getSeconds();
+			if (hours < 10) {
+				hours = '0' + hours;
+			}
+			if (minutes <10) {
+				minutes = '0' + minutes;
+			}
+			if (seconds < 10) {
+				seconds = '0' + seconds
+			}
+			document.querySelector('#clock').textContent = hours + ':' + minutes + ':' + seconds;
+			if (hours===minutes===seconds) {
+				document.querySelector('#clock').style.fontSize = 25;
+				document.querySelector('#clock').style.color = 'red';
+			} else{
+				
+			}
+		})
+		// ----------end Clock-----------	
+
+		// ----------Generate Serial Characters-----------
+		var a = [];
+		for (var i = 0; i < 10; i++) {
+			var jsa = '1235467890abcdefghijklmnopqrstuvwxyz';
+			var random = Math.floor(Math.random()*jsa.length);
+			var substr = jsa.substring(random, random+1);
+			a.push(substr);
+			document.querySelector('#char_random').innerHTML += substr;
+		}
+		var set = new Set(a);
+		var setToArray = [...set];
+		var arrayToString = setToArray.join().replace(/,/g,'');
+		document.querySelector('#char_no_repeat').innerHTML = arrayToString
+		// ----------end Generate Serial Characters-----------
+
+		// ----------shuffle-----------
+		var shuffle = ['h','a','m','z','a'];
+		var i, j, k;
+		  for (i = shuffle.length -1; i > 0; i--) {
+		    j = Math.floor(Math.random() * 5)
+		    k = shuffle[i]
+		    shuffle[i] = shuffle[j]
+		    shuffle[j] = k
+		  }
+		  document.querySelector(".shuffle").innerHTML = shuffle.join('');
+		  // ----------end shuffle-----------
+
+
+		  // ----------Get data by JSON-----------
+		  $.getJSON('download.json', function (data) {
+			// var content = '';
+			// // for (var x in data){
+			// 	content += `${data[0].userId[0]} \n`;
+				
+			// // }
+			// console.log(content)
+		  })
+
+		  // ----------Get data by AJAX-----------
+		  $.ajax({
+		  	url: 'download.json',
+		  	dataType: 'json',
+		  	cache: false,
+		  	success: function (data, status) {
+		  // 		var content = '';
+		  // 		for(var i=0; i<data[0].userId.length; i++)
+		  // 		{
+		  // 			content += `${data[0].userId[i]} \n`;
+		  // 		}
+				// console.log(content)
+		  	}
+		  })
+
+
+		  // ----------weather API-----------
+		  // $("#test").click(function () {
+		  // 	var city = $("#city").val();
+		  // 	var key = '1c55c0b1dd567ce306e09625fe04bab7';
+		  // 	$.getJSON('api.openweathermap.org/data/2.5/weather?q=London', function (data) {
+		  // 		console.log(data.name)
+		  // 	})
+
+		  // })
+		  
+		 $('#click').click(function () {
+		 	var city = document.querySelector('.value').value;
+			console.log(city);
+			var key = '1c55c0b1dd567ce306e09625fe04bab7';
+		 	$.ajax({
+			  	url: 'api.openweathermap.org/data/2.5/weather',
+			  	dataType: 'json',
+			  	type: 'GET',
+			  	data: {q: city, appid: key},
+			  	success: function (data) {
+			  		var xx = `${data.name}`;
+			  		console.log(xx)
+			  	}
+			})
+		 })
+	</script>
+</body>
+</html>
