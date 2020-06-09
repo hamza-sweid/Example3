@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Where was the World Cup held in 2006?",
+        "answer_1": "In Brazil",
+        "answer_2": "In Germany",
+        "answer_3": "In South Africa",
+        "answer_4": "In America",
+        "right_answer": "In Germany"
+    },
+    {
+        "title": "Who won the champion leguea in 2001/2002?",
+        "answer_1": "Real Madrid",
+        "answer_2": "Manchester United",
+        "answer_3": "Liverpool",
+        "answer_4": "Barcelona",
+        "right_answer": "Real Madrid"
+    },
+    {
+        "title": "Who scored the winning goal in the World Cup final 2014?",
+        "answer_1": "Lionel Messi",
+        "answer_2": "Di Maria",
+        "answer_3": "Thomas Muller",
+        "answer_4": "Mario Gotze",
+        "right_answer": "Mario Gotze"
+    },
+    {
+        "title": "Who won the award for the best player in the world in 2010?",
+        "answer_1": "Lionel Messi",
+        "answer_2": "Cristiano Ronaldo",
+        "answer_3": "Andres Ineista",
+        "answer_4": "Recardo Kaka",
+        "right_answer": "Lionel Messi"
+    },
+    {
+        "title": "Which country has won world cup most?",
+        "answer_1": "Germany",
+        "answer_2": "Brazil",
+        "answer_3": "Netherland",
+        "answer_4": "England",
+        "right_answer": "Brazil"
+    },
+    {
+        "title": "Who was the coach of Barcelona when they won the triple?",
+        "answer_1": "Pep Guardiola",
+        "answer_2": "Jose Mourinho",
+        "answer_3": "Ernesto Valverde",
+        "answer_4": "Johan Cruyff",
+        "right_answer": "Pep Guardiola"
+    },
+    {
+        "title": "Who has more goals in champions league?",
+        "answer_1": "Lionel Messi",
+        "answer_2": "Cristiano Ronaldo",
+        "answer_3": "Karim Benzema",
+        "answer_4": "Robert Lewandowski",
+        "right_answer": "Cristiano Ronaldo"
+    },
+    {
+        "title": "Who is the top scorer in La Liga 2015/2016?",
+        "answer_1": "Luis Suárez ",
+        "answer_2": "Cristiano Ronaldo",
+        "answer_3": "Lionel Messi",
+        "answer_4": "Karim Benzema",
+        "right_answer": "Luis Suárez "
+    },
+    {
+        "title": "When did Portugal win the Euro Cup?",
+        "answer_1": "2008",
+        "answer_2": "2012",
+        "answer_3": "2004",
+        "answer_4": "2016",
+        "right_answer": "2016"
+    }
+]
