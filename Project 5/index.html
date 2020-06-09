@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="quiz-app">
+        <div class="quiz-info">
+            <div class="category">Category: <span>HTML</span></div>
+            <div class="count">Questions Count: <span class="currentQst"></span> / <span class="allQst"></span></div>
+        </div>
+        <div class="quiz-area">
+            <span class="rightanscont"><i class="fa fa-check"></i> <span class="rightans"></span></span>
+            <h2></h2>
+            <span class="wronganscont"><i class="fa fa-times"></i> <span class="wrongans"></span></span>
+        </div>
+        <div class="answers-area">
+            <div class="answer ans1">
+                <input class="input" type="radio" id="answer1" name="questions" data-answer="" checked>
+                <label for="answer1" class="answer1"></label>
+            </div>
+            <div class="answer ans2">
+                <input class="input" type="radio" id="answer2" name="questions" data-answer="">
+                <label for="answer2" class="answer1"></label>
+            </div>
+            <div class="answer ans3">
+                <input class="input" type="radio" id="answer3" name="questions" data-answer="">
+            <label for="answer3" class="answer1"></label>
+            </div>
+            <div class="answer ans4">
+                <input class="input" type="radio" id="answer4" name="questions" data-answer="">
+                <label for="answer4" class="answer1"></label>
+            </div>
+        </div>
+        <button class="submit-button">Submit Answer</button>
+        <div class="bullets">
+            <div class="spans"></div>
+            <div class="time">
+                <i class="fa fa-clock-o fa-lg"></i>
+                <span class="countdown"></span>
+            </div>
+        </div>
+        <div class="results"></div>
+        <div class="again"><button>Try Again</button></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

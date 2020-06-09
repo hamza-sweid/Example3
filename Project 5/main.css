@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Tahoma, Arial;
+    background: linear-gradient(180deg, black, transparent);
+    min-height: 635px;
+}
+.quiz-app {
+    margin: 20px auto;
+    max-width: 1000px;
+    padding: 15px;
+}
+.quiz-app .quiz-info {
+    display: flex;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+.quiz-app .quiz-info .category {
+    flex: 1;
+}
+.quiz-app .quiz-info .count {
+    flex: 1;
+    text-align: right;
+}
+.quiz-app .quiz-area {
+    background-color: #fff;
+    padding: 15px 30px;
+    position: relative;
+    margin: 20px auto;
+}
+.quiz-app .quiz-area h2 {
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 17px;
+    padding-bottom: 0;
+}
+.quiz-app .quiz-area .rightanscont{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: 1px solid #21b9aa;
+    color: #21b9aa;
+    padding: 12px 6px;
+    border-radius: 50%;
+}
+.quiz-app .quiz-area .wronganscont{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    border: 1px solid rgb(216, 31, 31);
+    color: rgb(216, 31, 31);
+    padding: 12px 6px;
+    border-radius: 50%;
+}
+.quiz-app .answers-area {
+    position: relative;
+    padding: 0 20px 20px;
+    min-height: 160px;
+}
+.quiz-app .answers-area .answer {
+    background-color: #f9f9f9;
+    padding: 25px;
+    display: inline;
+}
+
+.quiz-app .answers-area .ans1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 350px;
+    text-align: center;
+    border-radius: 5em;
+}
+.quiz-app .answers-area .ans2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 350px;
+    text-align: center;
+    border-radius: 5em;
+}
+.quiz-app .answers-area .ans3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 350px;
+    text-align: center;
+    border-radius: 5em;
+}
+.quiz-app .answers-area .ans4{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-width: 350px;
+    text-align: center;
+    border-radius: 5em;
+}
+.quiz-app .answers-area .answer:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+}
+.quiz-app .answers-area .answer input[type="Radio"]:checked + label {
+    color: #0075ff;
+}
+.quiz-app .answers-area .answer label {
+    cursor: pointer;
+    font-weight: bold;
+    color: #777;
+    font-size: 14px;
+    margin-left: 5px;
+    position: relative;
+    top: -1px;
+}
+.quiz-app .submit-button {
+    background-color: #0075ff;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 20px auto;
+    border-radius: 5rem;
+}
+.quiz-app .submit-button:focus {
+    outline: none;
+}
+.quiz-app .bullets {
+    border-top: 1px solid #dfdfdf;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.quiz-app .bullets .spans {
+    flex: 1;
+    display: flex;
+}
+.quiz-app .bullets .spans span {
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.quiz-app .bullets .spans span.on {
+    background-color: #0075ff;
+}
+
+.quiz-app .results{
+    padding: 20px;
+    background-color: #eee;
+    display: none;
+}
+
+.quiz-app .again{
+    text-align: center;
+    display: none;
+    background-color: rgba(49, 128, 121, 0.4);
+}
+.quiz-app .again button{
+    padding: 18px;
+    margin: 10px 0;
+    background-color: #0075ff;
+    color: #eee;
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+.quiz-app .again button:hover{
+    background-color: #1474e0;
+}
+.quiz-app .again button:focus{
+    outline: none;
+}
+.quiz-app .results span {
+    font-weight: bold;
+}
+.quiz-app .results span.bad {
+    color: #dc0a0a;
+}
+.quiz-app .results span.good {
+    color: #009688;
+}
+.quiz-app .results span.perfect {
+    color: #0075ff;
+}
+
+@media(max-width: 992px){
+    .quiz-app {
+        max-width: 850px;   
+    }
+    .quiz-app .answers-area{
+        display: flex;
+        flex-direction: column;
+    }
+    .quiz-app .answers-area .answer{
+        position: relative;
+        padding: 17px;
+    }
+    .quiz-app .answers-area .answer:not(:last-child){
+        margin-bottom: 15px;
+    }
+    .quiz-app .submit-button{
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 576px){
+    .quiz-app .quiz-area h2{
+        font-size: 21px;
+    }
+    .quiz-app .answers-area .answer{
+        text-align: left;
+    }
+}
