@@ -92,16 +92,16 @@ button:focus, a:focus{
         font-size: 4.5vw !important
     }
     h2{
-        font-size: 3vw ;
+        font-size: 3vw !important ;
     }
 }
 
 @media(max-width: 600px){
     h1{
-        font-size: 5vw;
+        font-size: 5vw !important;
     }
     h2{
-        font-size: 3.7px;
+        font-size: 3.7vw !important;
     }
 }
 
@@ -325,7 +325,7 @@ button:focus, a:focus{
 @media(max-width: 992px){
     .landing{
         background: url('../../assets/images/landing2.jpg') no-repeat ;
-        background-size: 130% 100% ;
+        background-size: 130% 110% ;
     }
     .landing .container{
         max-width: 720px;
@@ -341,7 +341,7 @@ button:focus, a:focus{
 
 @media(max-width: 768px){
     .landing{
-        background-size: 155% 100% ;
+         background-size: 155% 110% ;
     }
     .landing .container{
         max-width: 540px;
