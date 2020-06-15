@@ -16,7 +16,8 @@ let body = document.querySelector('body'),
     label = document.querySelectorAll('.answer1'),
     bulletsContainer = document.querySelector('.bullets'),
     resultsContainer = document.querySelector('.results'),
-    tryAgain = document.querySelector('.again');
+    tryAgain = document.querySelector('.again'),
+    anotherGame = document.querySelector('.another-game');
 
 let numOfQst,
     currentQst = 0,
@@ -79,6 +80,7 @@ function myRequest() {
                     bulletsContainer.remove();
                     countContainer.remove();
                     clearInterval(countdown);
+                    anotherGame.style.display = 'block'
 
                     // show the the result
                     showResult();
@@ -101,7 +103,7 @@ myRequest();
 
 // -----create countdown-----
 function countDown(timer) {
-    countdown = setInterval(function () {
+    countdown = setInterval( () => {
         if(timer <=9){
             timeContainer.style.color = 'red';
             timeContainer.style.fontWeight = 'bold';
@@ -137,15 +139,19 @@ function addData(obj, count) {
 
 // -----create check answer function-----
 function checkAns(rAns) {
-    let answers = document.querySelectorAll('.input');
-    let choosenAns;
+    let answers = document.querySelectorAll('.input'),
+        success = document.querySelector('.success'),
+        fail = document.querySelector('.fail'),
+        choosenAns;
     for (let i=0; i<4; i++){
         answers[i].checked && (choosenAns = answers[i].dataset.answer)
     }
     if(rAns === choosenAns){
+        success.play();
         rightAnswers++;
         currnetRightAns++;
     } else{
+        fail.play();
         CurrentWrongAns++
     }
 }
