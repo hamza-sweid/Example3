@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Matching Game</title>
+    <link rel="shortcut icon" href="favicon.jpg">
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- welcome message -->
+    <div class="welcome">
+        <span>Start Game</span>
+    </div>
+
+    <!-- player info -->
+    <div class="player-info">
+        <div class="name">
+            Hello: <span></span>
+        </div>
+        <div class="timer">
+            <i class="fa fa-clock-o"> :&ThickSpace; </i><span></span>
+        </div>
+        <div class="moves">
+            Moves: <span>0</span>
+        </div>
+    </div>
+
+    <!-- blocks -->
+    <div class="blocks">
+        <div class="game-block" data-type="star">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-star"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="star">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-star"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="music">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-music"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="music">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-music"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="headphones">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-headphones"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="headphones">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-headphones"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="plane">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-plane"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="plane">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-plane"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="thumpsup">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-thumbs-o-up"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="thumpsup">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-thumbs-o-up"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="trophy">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-trophy"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="trophy">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-trophy"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="umbrella">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-umbrella"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="umbrella">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-umbrella"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="bell">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-bell-o"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="bell">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-bell-o"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="ambulance">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-ambulance"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="ambulance">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-ambulance"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="gamepad">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-gamepad"></i>
+            </div>
+        </div>
+        <div class="game-block" data-type="gamepad">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fa fa-gamepad"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- audio part -->
+    <audio id="success" src="success.mp3" preload="auto"></audio>
+    <audio id="fail" src="fail.mp3" preload="auto"></audio>
+    <audio id="lose" src="game-over.mp3" preload="auto"></audio>
+    <audio id="win" src="win.wav" preload="auto"></audio>
+
+    <!-- end game -->
+    <div class="finished">
+        <div class="x">
+            <span class="state-us"></span>
+            <p>Number of Moves: <span class="number-of-moves"></span></p>
+            <p class="again">Try Again</p>
+        </div>
+        <div class="another-game">
+            <a href="https://hamza-sweid.github.io/Projects/Project%205/" target="_blank">
+                <p>Try Another Game</p>
+                <img src="Capture5.png" alt="" width="200px">
+            </a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/hamza-sweid-345746184/" target="_blank"><i class="fa fa-linkedin "></i></a>
+            <a href="https://www.facebook.com/hamza.sweid" target="_blank"><i class="fa fa-facebook "></i></a>
+            <a href="mailto:hamza.sweid963@gmail.com"><i class="fa fa-envelope-o "></i></a>
+        </div>
+        <p>
+            © 2020 <a href="https://hamza--sweid.000webhostapp.com" target="_blank">Hamza Sweid</a>
+        </p>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

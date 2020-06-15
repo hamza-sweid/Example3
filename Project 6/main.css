@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, Tahoma, sans-serif;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.welcome {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(3, 169, 244, 0.9);
+}
+.welcome span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F44336;
+    color: #FFF;
+    padding: 15px 25px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.player-info {
+    margin: 20px auto 0;
+    background-color: #F6F6F6;
+    padding: 15px;
+    font-size: 22px;
+    overflow: hidden;
+    border: 2px solid #759ac5;
+    display: flex;
+    justify-content: space-between;
+}
+.blocks {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 60px;
+    background: linear-gradient(#57bebc,#68a2c3, #9487c9);
+    padding: 10px;
+}
+.blocks.no-clicking {
+    pointer-events: none;
+}
+.blocks .game-block {
+    height: 140px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    flex: 0 1 140px;
+    margin: 10px 10px 20px;
+    border-radius: 7px;
+}
+.blocks .flipped{
+    transform: rotateY(180deg);
+}
+.blocks .game-block .front {
+    background-color: #333;
+    line-height: 140px;
+    transform: rotateY(180deg);
+}
+.blocks .game-block .front:before {
+    content: '?';
+    color: #FFF;
+    font-size: 70px;
+    font-weight: bold;
+}
+.blocks .game-block .back {
+    background-color: #255049;
+    transform: rotateY(180deg);
+}
+.blocks .game-block .back .fa {
+    line-height: 140px;
+    font-size: 70px;
+    color: #ececec;
+}
+.blocks .game-block .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.blocks .matched {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+.finished{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 169, 244, 0.9);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.finished .x{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    background-color: #F44336;
+    color: #FFF;
+    padding: 15px 25px 10px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.finished .another-game p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F44336;
+    color: #FFF;
+    padding: 15px 25px 10px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.finished .another-game img{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+.footer{
+    background-color: #222;
+    color: #f6f6f6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 19px;
+}
+.footer .social{
+    margin: 20px
+}
+.footer .social i{
+    padding: 15px;
+    background-color: #759ac5;
+    border-radius: 50%;
+    font-size: 19px;
+    margin: 5px
+}
+.footer p a{
+    color: #759ac5;
+}
+
+/* for responsive */
+@media(max-width: 992px){
+    .blocks{
+        margin: 20px
+    }
+    .blocks .game-block {
+        height: 100px;
+        width: 100px;
+        flex: 0 1 100px;
+        margin: 10px
+    }
+    .blocks .game-block .front,
+    .blocks .game-block .back .fa{
+        line-height: 100px;
+    }
+    .blocks .game-block .back .fa{
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 676px){
+    .blocks{
+        margin: 5px
+    }
+    .blocks .game-block {
+        height: 70px;
+        width: 70px;
+        flex: 0 1 70px;
+        margin: 10px
+    }
+    .blocks .game-block .front,
+    .blocks .game-block .back .fa{
+        line-height: 70px;
+    }
+    .blocks .game-block .back .fa,
+    .blocks .game-block .front:before{
+        font-size: 40px;
+    }
+    .finished *{
+        font-size: 18px !important;
+    }
+}
