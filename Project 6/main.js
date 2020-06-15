@@ -1,17 +1,17 @@
-let blocks = document.querySelectorAll('.game-block');
-let blocksArray = [...blocks];
-let blocksContainer = document.querySelector('.blocks');
-let movesContainer = document.querySelector('.moves span')
+let blocks = document.querySelectorAll('.game-block'),
+    blocksArray = [...blocks],
+    blocksContainer = document.querySelector('.blocks'),
+    movesContainer = document.querySelector('.moves span')
 
-let timer;
-let moves = 0;
-let timerInterval;
+let timer,
+    moves = 0,
+    timerInterval;
 
 // ----- start the game -----
 let welcome = document.querySelector('.welcome');
-welcome.onclick = function () {
-    let name = document.querySelector('.name span');
-    let enterName = prompt('Enter Your Name');
+welcome.onclick = () => {
+    let name = document.querySelector('.name span'),
+        enterName = prompt('Enter Your Name');
     if(enterName === '' || enterName === null){
         name.innerHTML = 'Unknown'
     } else{
@@ -64,7 +64,7 @@ blocks.forEach(block => block.onclick = () => {
 function startTimer(){
     let gameTimerContainer = document.querySelector('.timer');
     let gameTimer = document.querySelector('.timer span');
-    timerInterval = setInterval(function () {
+    timerInterval = setInterval( () => {
         gameTimer.innerHTML = timer;
         timer--;
         if(timer <=9){
@@ -84,12 +84,11 @@ function startTimer(){
 
 // -----game over function -----
 function gameOver() {
-    let finished = document.querySelector('.finished');
-    let tryAgain = document.querySelector('.again');
-    let win = document.querySelector('#win');
-    let lose = document.querySelector('#lose');
-    let playerStatUs = document.querySelector('.finished .state-us');
-    let numberOfMoves = document.querySelector('.number-of-moves');
+    let finished = document.querySelector('.finished'),
+        win = document.querySelector('#win'),
+        lose = document.querySelector('#lose'),
+        playerStatUs = document.querySelector('.finished .state-us'),
+        numberOfMoves = document.querySelector('.number-of-moves');
 
     // finished the game?
     if(blocksArray.every(e => e.classList.contains('matched'))){
@@ -98,7 +97,7 @@ function gameOver() {
         numberOfMoves.innerHTML = moves;
         win.play();
         clearInterval(timerInterval);
-        finished.children[0].onclick = function () {
+        finished.children[0].onclick = () => {
             window.location.reload()
         }
     }
@@ -110,7 +109,7 @@ function gameOver() {
         numberOfMoves.innerHTML = moves;
         lose.play();
         clearInterval(timerInterval);
-        finished.children[0].onclick = function () {
+        finished.children[0].onclick = () => {
             window.location.reload()
         }
     }
