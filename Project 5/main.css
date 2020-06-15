@@ -190,6 +190,19 @@ body {
 .quiz-app .results span.perfect {
     color: #0075ff;
 }
+.quiz-app .another-game{
+    display: none;
+    margin: 50px auto
+}
+.quiz-app .another-game p{
+    background-color: #009688;
+    padding: 10px;
+    width: 200px;
+    margin: 10px auto;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+}
 
 @media(max-width: 992px){
     .quiz-app {
