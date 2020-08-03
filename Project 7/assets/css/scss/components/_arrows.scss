@@ -1,0 +1,68 @@
+.fa-angle-down,
+.fa-angle-up {
+    width: 30px;
+    height: 38px;
+    background-color: #fff;
+    color: #222;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 38px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+
+    &:hover {
+        background-color: $hover-color;
+        color: #fff;
+    }
+
+    @media(max-width: 1200px) {
+        display: none;
+    }
+}
+
+.fa-angle-up {
+    top: 40px;
+}
+
+.fa-angle-down {
+    bottom: 40px;
+}
+
+.top {
+    padding: 4px;
+    position: fixed;
+    z-index: 999;
+    right: 50px;
+    bottom: 50px;
+    font-size: 35px;
+    color: #fff;
+    background-color: #b8784e;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    transform: translateY(110px);
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    @media(max-width: 500px){
+        bottom: 30px;
+        right: 30px;
+    }
+    &:hover{
+        background-color: #a56135;
+    }
+
+    i{
+        &:hover{
+            color: unset;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+// -----@mixin prefix-----
+@mixin prefixer ($prop, $val, $prefixies:()) {
+    @each $prefix in $prefixies {
+        #{'-' + $prefix + '-' + $prop}: $val;
+    }
+
+    #{$prop}: $val
+}

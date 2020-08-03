@@ -1,0 +1,63 @@
+/* start footer */
+.footer {
+    .footer-container {
+        background-color: #302f2f;
+        position: relative;
+
+        .footer-img {
+            img {
+                position: sticky;
+                top: 0;
+                height: 100vh;
+            }
+        }
+
+        .footer-content {
+            color: #fff !important;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            img {
+                width: 80%;
+                margin: auto;
+            }
+
+            p {
+                color: #c1c1c1;
+            }
+
+            .media {
+                margin: auto;
+
+                i {
+                    padding: 0 20px;
+                    font-size: 25px;
+                }
+            }
+
+            .brand-info {
+
+                i {
+                    font-size: 23px;
+                    margin-bottom: 15px;
+                    color: $hover-color;
+                }
+
+                p {
+                    color: #fff;
+                }
+
+                button {
+                    font-size: 17px;
+                }
+            }
+
+            .rights {
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+}
+
+/* end footer */
