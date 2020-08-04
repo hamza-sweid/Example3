@@ -1,5 +1,5 @@
-.container{
-  padding: 0
+.container {
+  padding: 0;
 }
 
 .section-container {
@@ -698,7 +698,7 @@ button:active {
 
 /* -----end header-----*/
 /* start preloader */
-.preloader {
+.loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -707,35 +707,15 @@ button:active {
   background-color: #BF7C2C;
   z-index: 999;
   overflow-x: hidden;
-}
-
-.preloader .cup {
-  text-align: center;
-  position: fixed;
-  top: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.preloader .cup::before {
-  left: 50%;
-  content: '';
-  position: absolute;
-  width: 64px;
-  height: 14px;
-  border-radius: 50%;
-  background: #3A2F28;
-  text-align: center;
-  top: 11px;
-  -webkit-transform: translateX(-40px);
-          transform: translateX(-40px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @-webkit-keyframes wave {
@@ -774,8 +754,38 @@ button:active {
   }
 }
 
-.preloader .cup ul {
-  margin: -35px 16px 0 0;
+.loader .cup {
+  background: #F2E3B4;
+  width: 60px;
+  height: 54px;
+  border-radius: 0 0 50% 50%;
+  position: relative;
+}
+
+.loader .cup:before {
+  content: "";
+  position: absolute;
+  width: 66px;
+  height: 20px;
+  border-radius: 50%;
+  background: inherit;
+  left: -3px;
+  top: -10px;
+}
+
+.loader .cup:after {
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3A2F28;
+  left: 2px;
+  top: -6px;
+}
+
+.loader .cup ul {
+  margin: -50px 0 0px 0;
   padding: 0;
   list-style: none;
   width: 60px;
@@ -784,10 +794,9 @@ button:active {
           animation: wave 2s infinite linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  position: absolute;
 }
 
-.preloader .cup ul li {
+.loader .cup ul li {
   display: inline-block;
   background: #FAF1D9;
   height: 30px;
@@ -797,9 +806,36 @@ button:active {
           transform: rotate(12deg);
 }
 
-.preloader .cup .fa-coffee {
-  font-size: 100px;
-  color: #FAF1D9;
+.loader span {
+  background: #F2E3B4;
+  width: 13px;
+  height: 20px;
+  position: absolute;
+  right: -13px;
+  top: 10px;
+  border-radius: 0 50% 50% 0;
+}
+
+.loader span:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  background: #BF7C2C;
+  width: 10px;
+  height: 12px;
+  border-radius: 0 50% 50% 0;
+}
+
+.loader span:after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: -50px;
+  background: #F2E3B4;
+  width: 40px;
+  height: 8px;
+  border-radius: 50%;
 }
 
 /* end preloader */

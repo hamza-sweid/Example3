@@ -75,9 +75,10 @@ button:active {
     }
 }
 
-@media(max-width: 500px){
+@media(max-width: 500px) {
+
     .btn1,
-    .btn2{
+    .btn2 {
         font-size: 17px;
     }
 }
