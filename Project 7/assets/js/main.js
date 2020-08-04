@@ -6,7 +6,7 @@ $(document).ready(function () {
     })
 
     // search-form
-    $('.search,.close-icon').click(function name() {
+    $('.search,.close-icon').click(function () {
         $('.navbar-right,.navbar-left').toggle();
         $('.form-search').toggle();
     });
