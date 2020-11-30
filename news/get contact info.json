@@ -1,7 +1,6 @@
 {
     "status": "Success",
     "response": {
-        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "img": "image:url"
+        "offline_courses": []
     }
 }
