@@ -1,6 +1,6 @@
 {
     "status": "Success",
     "response": {
-        "offline_courses": []
+        "offline_courses": [1,2,3,4,5]
     }
 }
